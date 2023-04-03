@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Whisper Chat</title>
+</head>
+
+<body>
+
+    <div class="get_started_container">
+        <h2 class="title">Welcome to Whisper Chat</h2>
+        <div class="input_container">
+            <label for="roomIdInput">Enter your name (10 chars):</label>
+            <input type="text" id="roomIdInput" placeholder="Example: Alden" required><br>
+            <button id="joinRoomBtn" class="joinRoomBtn">Join Room</button><br>
+            <h5>Want to know more about us?&nbsp; <span id="createRoomBtn">Learn more</span></h5>
+        </div>
+    </div>
+
+    <div class="room_container hidden">
+        <div class="room_code_display">
+            <div class="user_count_display" title="Contact us">
+                <i class='bx bxs-contact'></i>
+            </div>
+            <div class="room_code_no_display">
+                Whisper room:&nbsp; <span id="roomCodeDisplay">
+                    <p id="roomCodeDisplayCode">global</p>
+                </span>
+            </div>
+            <div class="room_exit_btn" title="About us">
+                <i class='bx bxs-info-circle'></i>
+            </div>
+        </div>
+        <div class="message_display">
+
+            <div id="message_container" class="message_container">
+                <!-- <div class="message_box">
+                    <span>Rudro</span><br>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo asperio</p>
+                </div>
+                <div class="alert_box">
+                        <span>Rudro</span>&nbsp;joined the room
+                </div> -->
+            </div>
+
+        </div>
+        <div class="message_input_container">
+            <input type="text" id="messageInput" placeholder="What's on your mind?">
+            <button id="sendMessage"><i class='bx bxl-telegram'></i></button>
+        </div>
+    </div>
+
+    <script src="socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+</body>
+
+</html>

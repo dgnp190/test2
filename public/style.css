@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+*::-webkit-scrollbar {
+    width: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.get_started_container {
+    height: 20rem;
+    width: 30rem;
+    background-color: #e2e2e2;
+    border-radius: 8px;
+}
+
+.get_started_container h2 {
+    text-align: center;
+    margin-top: 3rem;
+    user-select: none;
+}
+
+.get_started_container .input_container {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.get_started_container .input_container label {
+    margin-top: 5px;
+    user-select: none;
+}
+
+.get_started_container .input_container input {
+    width: 70%;
+    height: 2rem;
+    border: none;
+    outline: none;
+    border: 1px solid rgb(15, 123, 247);
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 0.5rem;
+}
+
+.get_started_container .input_container input:hover {
+    box-shadow:  1px 1px 1px rgb(15, 123, 247),
+                 -1px -1px 1px rgb(15, 123, 247);
+}
+
+.get_started_container .input_container input:focus {
+    box-shadow: inset 1px 1px 2px rgb(15, 123, 247),
+                inset -1px -1px 2px rgb(15, 123, 247);
+}
+
+.get_started_container .input_container input::placeholder{
+    text-align: center;
+    user-select: none;
+}
+
+.get_started_container .input_container .joinRoomBtn {
+    width: 40%;
+    height: 30px;
+    border: none;
+    outline: none;
+    background-color: rgb(15, 123, 247);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s all ease;
+    user-select: none;
+    margin-top: -0.5rem;
+}
+
+.get_started_container .input_container .joinRoomBtn:hover {
+    background-color: rgb(60, 143, 238);
+}
+
+.get_started_container .input_container h5 {
+    user-select: none;
+}
+
+.get_started_container .input_container h5 span {
+    color: rgb(60, 143, 238);
+    text-decoration: underline;
+    cursor: pointer;
+    user-select: none;
+}
+
+.get_started_container .input_container h5 span:hover {
+    color: rgb(0, 119, 255);
+}
+
+.room_container {
+    height: 35rem;
+    width: 25rem;
+    background-color: #e2e2e2;
+    border-radius: 8px;
+}
+
+.room_container .room_code_display {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid #000;
+}
+
+.room_container .message_display {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.room_container .message_input_container {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid #000;
+}
+
+.room_container .message_display .message_container {
+    width: 90%;
+    overflow: auto;
+}
+
+.room_container .message_display .message_container .message_box {
+    width: 40%;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: #ffffff;
+}
+
+.room_container .message_display .message_container .message_box span {
+    color: rgb(15, 123, 247);
+    user-select: none;
+    text-decoration: underline;
+}
+
+.room_container .message_display .message_container .message_box p {
+    word-wrap: break-word;
+}
+
+.room_container .room_code_display .user_count_display {
+    height: 30px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+    user-select: none;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.room_container .room_code_display .user_count_display:hover {
+    box-shadow: inset 1px 1px 3px rgb(0, 87, 250),
+                inset -1px -1px 3px rgb(0, 87, 250);
+}
+
+.room_container .room_code_display .user_count_display i {
+    color: rgb(0, 87, 250);
+    font-size: 18px;
+}
+
+.room_container .room_code_display .room_code_no_display {
+    height: 30px;
+    width: 230px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.room_container .room_code_display .room_exit_btn {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: rgb(97, 0, 252);
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.room_container .room_code_display .room_exit_btn:hover {
+    box-shadow: inset 1px 1px 3px rgb(97, 0, 252),
+                inset -1px -1px 3px rgb(97, 0, 252);
+}
+
+.room_container .room_code_display .room_code_no_display span {
+    color: rgb(1, 212, 124);
+}
+
+.room_container .message_input_container input{
+    height: 60%;
+    width: 75%;
+    border: none;
+    outline: none;
+    border: 1px solid rgb(15, 123, 247);
+    border-radius: 20px;
+    padding-left: 1rem;
+    font-size: 15px;
+}
+
+.room_container .message_input_container button {
+    height: 60%;
+    width: 15%;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: rgb(15, 123, 247);
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.5s all ease;
+}
+
+.room_container .message_input_container button:hover {
+    background-color: #ffffff;
+    color: rgb(15, 123, 247);
+}
+
+.room_container .message_display .message_container .alert_box {
+    height: 1.5rem;
+    width: 14rem;
+    background-color: #fff;
+    margin: auto;
+    margin-top: 1rem;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    user-select: none;
+}
+
+.room_container .message_display .message_container .alert_box span {
+    color: rgb(15, 123, 247);
+}
+
+.right {
+    margin-left: 13rem;
+}
+
+.hidden {
+    display: none;
+}
